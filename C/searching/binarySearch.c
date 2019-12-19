@@ -46,7 +46,7 @@ void bubbleSort(int * array, int size)
 
 int binarySearch(int * array, int left, int right, int value)
 {
-    if (right >= 1)
+    if (right >= left)
     {
         int mid = left + (right - left)/2;
 
@@ -61,9 +61,7 @@ int binarySearch(int * array, int left, int right, int value)
         {
             return binarySearch(array, left, mid - 1, value);
         }
-
-        //If value is present in the right side
-        if(*(array + mid) < value)
+        else if(*(array + mid) < value)
         {
             return binarySearch(array, mid + 1, right, value);
         }
@@ -80,7 +78,7 @@ void display(int * array, int size) {
     {
         printf("a[%d] : %d\n", i, *(array + i));
     }
-    printf("\n\n");
+    printf("\n");
 }
 
 int main()
