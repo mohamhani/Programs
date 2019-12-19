@@ -36,8 +36,6 @@ int partition(int *array, int lower, int upper)
 {
     int i = (lower - 1);
 
-    int mid_point = (upper - lower)/2;
-
     int pivot = *(array + upper);
 
     for(int j = lower; j < upper; j++)
