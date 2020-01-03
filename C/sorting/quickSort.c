@@ -64,7 +64,7 @@ void quick_sort(int *array, int lower, int upper)
     }
 }
 
-int main(int agrc, const char * argv[])
+int main(int argc, const char * argv[])
 {
     int size;
     printf("Enter the size of the array: ");
