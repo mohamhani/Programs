@@ -27,8 +27,8 @@ int main(int argc, char** argv) {
 
     HashObj.printTable();
 
-    //HashObj.findDrink("Omar");
-    //HashObj.findDrink("Axmed");
+    HashObj.findDrink("Omar");
+    HashObj.findDrink("Axmed");
 
     HashObj.removeItem("Omar");
     HashObj.removeItem("Ali");
