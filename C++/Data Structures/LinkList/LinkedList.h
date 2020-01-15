@@ -20,6 +20,7 @@ class LinkedList {
         LinkedList();
         void AddNode(int data);
         void DeleteNode(int data);
+        void reverseLinkedList();
         void DisplayList();
 };
 

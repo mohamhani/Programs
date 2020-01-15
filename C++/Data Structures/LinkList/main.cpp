@@ -17,8 +17,9 @@ int main(int argc, char** argv) {
 
     LinkedList List;
     int size, randomNumber;
-    cout << "Enter the size of the linked list: " << endl;
+    cout << "Enter the size of the linked list: ";
     scanf("%d", &size);
+    cout << endl;
 
     for(int i = 0; i < size; i++) {
         randomNumber = generateRandomNumber();
@@ -26,6 +27,12 @@ int main(int argc, char** argv) {
     }
 
     List.DisplayList();
+    cout << endl;
+
+    List.reverseLinkedList();
+
+    List.DisplayList();
+    cout << endl;
 
     return 0;
 }

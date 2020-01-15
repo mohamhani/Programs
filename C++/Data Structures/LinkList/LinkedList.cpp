@@ -28,6 +28,38 @@ void LinkedList::AddNode(int data) {
     }
 }
 
+void LinkedList::reverseLinkedList() {
+    if(head == NULL) {
+        cout << "The linked list is empty" << endl;
+        return;
+    }
+    else if(head->next == NULL) {
+        cout << "There is only one element in the linked list" << endl;
+        return;
+    }
+    else {
+        nodePtr prevNode = head;
+        curr = head->next;
+        nodePtr nextNode = curr->next;
+
+        prevNode->next = NULL;
+
+        while(curr != NULL) {
+            if(nextNode == NULL) {
+                curr->next = prevNode;
+                head = curr;
+                return;
+            }
+            else {
+                curr->next = prevNode;
+                prevNode = curr;
+                curr = nextNode;
+                nextNode = nextNode->next;
+            }
+        }
+    }
+}
+
 void LinkedList::DeleteNode(int data) {
     nodePtr delPtr = NULL;
     temp = head;
@@ -58,7 +90,7 @@ void LinkedList::DisplayList() {
     curr = head;
     cout << "Here is the created linked list: " << endl;
     while(curr != NULL) {
-        cout << curr->data << endl;
+        cout << curr->data << " ";
         curr = curr -> next;
     }
 }
