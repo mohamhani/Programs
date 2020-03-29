@@ -9,7 +9,7 @@ fs.writeFileSync('outputfile.txt', readFile);
 //Assync functions
 
 fs.readFile('readFile.txt', 'utf8', function(err, data){
-    fs.writeFile('asyncoutputfile', data, (err) => {
+    fs.writeFile('asyncoutputfile.txt', data, (err) => {
         if(err){
             throw err;
         }

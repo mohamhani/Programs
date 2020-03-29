@@ -1,0 +1,5 @@
+1. g++ (executes the compiler)
+2. -Wall (turns on all warnings)
+3. -std=c++14 (uses the 14 c++ standard)
+4. main.cpp (the file you want to compile)
+5. -o <filename> (creates a custom filename)
