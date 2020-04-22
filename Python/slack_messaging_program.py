@@ -20,4 +20,4 @@ def main():
     send_message(message, slack_url)
 
 if __name__ == "__main__":
-    main()
+	main()
